@@ -320,6 +320,8 @@ void place_tag_processor::process_tags(osmium::OSMObject const &o)
             extratags.push_back(&item);
         } else if (strcmp(k, "building") == 0) {
             placebuilding = true;
+        } else {
+            extratags.push_back(&*item);
         }
     }
 
